@@ -31,15 +31,18 @@ pip install -r requirements.txt
 
 ### Getting a palebluedot.ai token
 
-This skill does **not** use a direct OpenAI / Anthropic / MiniMax key. All three model calls (dialogue, voice, video) route through a single OpenAI-compatible gateway hosted at [palebluedot.ai](https://palebluedot.ai), which exposes `anthropic/claude-opus-4.6`, `openai/gpt-audio`, and `MiniMax-Hailuo-2.3` behind one endpoint with one token.
+This skill does **not** use a direct OpenAI / Anthropic / MiniMax key. All three model calls (dialogue, voice, video) route through a single OpenAI-compatible gateway from Pale Blue Dot, which exposes `anthropic/claude-opus-4.6`, `openai/gpt-audio`, and `MiniMax-Hailuo-2.3` behind one endpoint with one token.
 
-1. Go to **[https://open.palebluedot.ai](https://open.palebluedot.ai)** and sign up / sign in.
+1. Go to **[https://www.palebluedot.ai](https://www.palebluedot.ai)** and sign up / sign in.
 2. Create an API token in the dashboard (format: `sk-...`).
 3. Export it as `OPENAI_API_KEY` before running the skill:
 
    ```bash
    export OPENAI_API_KEY=sk-...your-palebluedot-token...
    ```
+
+- Website: [https://www.palebluedot.ai](https://www.palebluedot.ai)
+- API base URL: `https://open.palebluedot.ai/v1` (already the skill's default)
 
 > The env var is named `OPENAI_API_KEY` because the gateway speaks the OpenAI wire format — but the value **must be a palebluedot.ai token**, not an `openai.com` key. An `openai.com` key will be rejected by the gateway.
 
