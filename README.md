@@ -12,13 +12,13 @@ Turns a podcast transcript into a vertical 9:16 TikTok video where two cartoon a
 ### In OpenClaw
 
 ```bash
-openclaw install https://github.com/<your-user>/podcast-to-tiktok
+openclaw install https://github.com/yanboq/AnimalPodcast
 ```
 
 ### Manually
 
 ```bash
-git clone https://github.com/<your-user>/podcast-to-tiktok
+git clone https://github.com/yanboq/AnimalPodcast
 cd podcast-to-tiktok
 pip install -r requirements.txt
 ```
