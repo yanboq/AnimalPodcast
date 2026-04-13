@@ -1,6 +1,7 @@
 ---
 name: podcast-to-tiktok
-description: Turn a podcast transcript + hero image into a 6-second 9:16 TikTok video where two cartoon animals have a quick dialogue about the podcast's core idea. Uses MiniMax Hailuo 2.3 for visuals and OpenAI gpt-audio for voices via a single OpenAI-compatible gateway.
+description: Use when the user asks to turn a podcast transcript (or podcast URL) into a short cartoon TikTok — e.g. "turn this podcast into a cartoon TikTok", "make an animal-dialogue short from this transcript", "generate a 6-second cartoon video from this podcast". Produces a 6-second 1080x1920 9:16 MP4 with two cartoon animals dialoguing about the podcast's core idea, using MiniMax Hailuo 2.3 for video and OpenAI gpt-audio TTS via an OpenAI-compatible gateway.
+metadata: {"requires":"python3.11+, ffmpeg, palebluedot-gateway-key"}
 ---
 
 # podcast-to-tiktok
@@ -29,7 +30,7 @@ python skills/podcast-to-tiktok/generate.py \
 
 ## Environment
 
-- `OPENAI_API_KEY` — a palebluedot gateway key. All three model calls (chat, TTS, video) go through `https://open.palebluedot.ai/v1`.
+- `OPENAI_API_KEY` — a palebluedot gateway key. Named `OPENAI_API_KEY` because the script uses the OpenAI-compatible SDK convention; the gateway (`https://open.palebluedot.ai/v1`) fronts all three model calls (chat, TTS, video), not OpenAI directly.
 
 Optional overrides:
 
