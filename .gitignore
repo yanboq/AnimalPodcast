@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# Generated artifacts — nothing here should be tracked
+*.mp4
+*.pcm
+*.mp3
+*.wav
+out*/
+transcript_*.txt
+sample.txt
